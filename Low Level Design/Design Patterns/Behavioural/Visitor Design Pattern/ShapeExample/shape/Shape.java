@@ -1,6 +1,6 @@
-package shape;
+package ShapeExample.shape;
 
-import Visitor.Visitor;
+import ShapeExample.visitor.Visitor;
 
 public interface Shape {
      void accept(Visitor visitor);
