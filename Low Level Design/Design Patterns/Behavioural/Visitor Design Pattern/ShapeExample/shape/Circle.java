@@ -1,13 +1,21 @@
-package shape;
+package ShapeExample.shape;
 
-import Visitor.Visitor;
-
-
-public class Circle {
+import ShapeExample.visitor.Visitor;
 
 
+public class Circle implements Shape{
+    private Double radius;
 
+    public Circle(Double radius){
+        this.radius = radius;
+    }
+
+    public Double getRadius() {
+        return radius;
+    }
+
+    @Override
     public void accept(Visitor visitor) {
-
+        visitor.visitCircle(this);
     }
 }
